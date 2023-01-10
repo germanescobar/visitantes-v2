@@ -35,7 +35,7 @@ const VisitorModel = mongoose.Schema({
 const Visitor = mongoose.model('Visitor', VisitorModel);
 /***************************************************/
 
-app.post("/", async (req, res) => {
+app.get("/", async (req, res) => {
   const { query: { name } } = req;
   const paramName = name ? name : 'Anónimo';
 
