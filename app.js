@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/mongo-1', 
+mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost:27017/mongo-1', 
                     { 
                         useNewUrlParser: true,
                     });
